@@ -14,7 +14,7 @@ Install the development requirement from `tools/requirements.txt` explicitly, th
 
 ## Documentation
 
-- [Feature list](FEATURES.md) and [implementation plan](PLAN.md).
+- [Feature list](FEATURES.md).
 - [Agent instructions](AGENTS.md), [stack](STACK.md) and [contribution guide](CONTRIBUTING.md).
 - [Architecture](docs/ARCHITECTURE.md), [Rune verification](docs/RUNE-VERIFICATION.md) and [test conventions](tests/README.md).
 - [GitHub workflow](docs/GITHUB-WORKFLOW.md) and [security reporting](SECURITY.md).

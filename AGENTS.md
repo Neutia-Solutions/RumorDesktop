@@ -1,6 +1,6 @@
 # Working on RumorDesktop
 
-Read [STACK.md](STACK.md) and [CONTRIBUTING.md](CONTRIBUTING.md) before implementation. [Architecture](docs/ARCHITECTURE.md) defines process/data ownership; [FEATURES.md](FEATURES.md) and [PLAN.md](PLAN.md) define product scope.
+Read [STACK.md](STACK.md) and [CONTRIBUTING.md](CONTRIBUTING.md) before implementation. [Architecture](docs/ARCHITECTURE.md) defines process/data ownership; [FEATURES.md](FEATURES.md) defines public product scope.
 
 ## Accepted decisions
 

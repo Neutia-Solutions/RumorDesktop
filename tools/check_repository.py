@@ -34,8 +34,14 @@ def public_path_errors(root, paths):
 def local_links(path, root=ROOT):
     """Reject private-workspace file links and missing public Markdown targets."""
     errors = []
-    for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", path.read_text()):
+    content = path.read_text()
+    targets = re.findall(r"\[[^\]]*\]\(([^)]+)\)", content)
+    targets.extend(a or b for a, b in re.findall(r"(?m)^ {0,3}\[[^\]\n]+\]:\s*(?:<([^>\n]+)>|(\S+))", content))
+    for target in targets:
         target = target.strip("<>").split("#", 1)[0]
+        if target.casefold().startswith("file:"):
+            errors.append(f"{path}: local file URLs are not public document links")
+            continue
         if not target or re.match(r"[a-zA-Z][\w+.-]*:", target):
             continue
         resolved = (path.parent / target).resolve()

@@ -24,4 +24,4 @@ Canonical article identity is distinct from discovery channels and reversible st
 
 Intended Cargo layout when implementation starts: `crates/core`, `crates/desktop`, `crates/daemon`, with common protocol/host modules initially in core. All source-adapter implementations are in private sibling repositories and are not members or dependencies of this workspace, including optional dependencies. Shared protocol/domain types must not pull Rune into core/daemon. Do not create empty crates simply to make the layout appear implemented.
 
-The existing daemon/core can later serve a personal HTTP API. Website/mobile synchronization and service authentication are later scope. See [PLAN.md](../PLAN.md) for lifecycle, deduplication and learning details.
+The daemon/core can later serve a personal HTTP API. Website/mobile synchronization and service authentication are later scope. See [FEATURES.md](../FEATURES.md) for the public product scope.

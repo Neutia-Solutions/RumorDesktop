@@ -30,6 +30,24 @@ class RepositoryChecks(unittest.TestCase):
             doc.write_text("[private](../private.md)")
             self.assertTrue(any("leaves the public repository" in error for error in local_links(doc, root)))
 
+    def test_file_urls_cannot_bypass_private_link_guard(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            doc = root / "guide.md"
+            for scheme in ("file", "FILE"):
+                doc.write_text(f"[private]({scheme}:///private/notes.md)")
+                self.assertTrue(local_links(doc, root))
+
+    def test_reference_links_cannot_bypass_private_link_guard(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary) / "public"
+            root.mkdir()
+            (root.parent / "private.md").write_text("private planning")
+            doc = root / "guide.md"
+            for target in ("file:///private/notes.md", "../private.md", "<../private.md>"):
+                doc.write_text(f"[private][notes]\n\n[notes]: {target}\n")
+                self.assertTrue(local_links(doc, root))
+
     def test_fixture_escape_and_non_synthetic_provenance_are_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / "fixtures"

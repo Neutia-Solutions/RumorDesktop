@@ -2,7 +2,7 @@
 
 ## Current state
 
-This repository currently contains planning documents, agent guidance, synthetic fixtures, GitHub workflow configuration and Python verification tools. It has **no Cargo workspace, Rune client, daemon or runtime dependencies yet**. Do not present repository checks as an application build.
+This repository contains agent/GitHub tooling plus a Rust workspace with a source-independent provider contract, Linux subprocess host and executable synthetic provider. Rust 1.95.0 is pinned and tested for this core slice, with a Cargo-generated lockfile. The Rune client and daemon remain unimplemented; do not present protocol tests as a desktop application build. See [provider protocol](docs/PROVIDER-PROTOCOL.md).
 
 Python 3.11+ (including `tomllib`), Git, Make and the pinned development requirement in `tools/requirements.txt` run the repository tools. PyYAML is used for real YAML parsing rather than a hand-written parser; install the requirement explicitly before validation. Python is development tooling; the application remains Rust. Run commands from this repository root; the Makefile also resolves paths from its own location when invoked with `make -f`.
 
@@ -32,7 +32,7 @@ Initial runtime target: the owner's Linux/Wayland machine. Headless GPU renderin
 
 On 10 November 2026, local `rustc`, Cargo, Clippy and rustfmt were available; the default compiler reported 1.97.1, with a separate 1.95.0 toolchain also installed. Git retrieval of Rune failed because `github.com` could not resolve; no Rune checkout is cached. Upstream's current [toolchain file](https://github.com/anomalyco/rune/blob/dev/rust-toolchain.toml) declares 1.99.1. These observations do not establish a compatible, build-tested Rune pin.
 
-Consequently no artificial Cargo workspace, empty lockfile or untested toolchain/revision pin is introduced for setup. The pinning policy and checks are active now; resolving/building a real Rune revision remains the first implementation prerequisite. Preserve this distinction when reporting A9 status.
+The core workspace has since built and passed process integration tests on the separately installed 1.95.0 toolchain with cached dependencies. Its genuine generated lockfile does not include Rune. Resolving/building Rune remains blocked on dependency retrieval; update the toolchain deliberately if the actual selected Rune revision requires it. Do not confuse the core toolchain pin with a tested Rune version.
 
 ## Commands
 

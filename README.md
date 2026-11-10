@@ -8,15 +8,16 @@ The interface must be entirely keyboard-operable, with Vim-style defaults. A sep
 
 ## Development status
 
-Repository and GitHub workflow tooling is implemented. The Rune application, daemon and tested runtime dependency pins are not implemented yet. No application build or source integration is claimed.
+Repository/GitHub tooling, a versioned provider contract and a bounded Linux subprocess host are implemented and tested with an executable synthetic provider. The Rune application and daemon remain unimplemented; no desktop build or real source integration is claimed.
 
-Install the development requirement from `tools/requirements.txt` explicitly, then run `make help` and `make check`. Without a Cargo workspace, checks report repository-only validation; the full application gate fails until its prerequisites exist.
+Install the development requirement from `tools/requirements.txt` and provision the pinned Rust toolchain/dependencies explicitly, then run `make help` and `make check`. Rust validation uses the generated lockfile and offline mode. The full application gate still fails until the desktop and daemon suites exist.
 
 ## Documentation
 
 - [Feature list](FEATURES.md).
 - [Agent instructions](AGENTS.md), [stack](STACK.md) and [contribution guide](CONTRIBUTING.md).
 - [Architecture](docs/ARCHITECTURE.md), [Rune verification](docs/RUNE-VERIFICATION.md) and [test conventions](tests/README.md).
+- [Provider wire/process contract](docs/PROVIDER-PROTOCOL.md).
 - [GitHub workflow](docs/GITHUB-WORKFLOW.md) and [security reporting](SECURITY.md).
 
 This repository contains source-independent product documentation, public interfaces and synthetic fixtures. Provider inventories, access research, internal planning and personal handoffs belong outside this checkout.

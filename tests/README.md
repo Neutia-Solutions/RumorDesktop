@@ -1,6 +1,6 @@
 # Tests and fixtures
 
-Current executable tests cover repository tooling, fixture syntax/provenance and the capture runner's failure/isolation behavior. **They do not implement or validate article extraction, daemon recovery, model behavior or Rune interaction.** Run them with `make check-fast` after explicitly installing the pinned `tools/requirements.txt` development dependency. The gate now also parses GitHub YAML and checks forms/public-CI privileges and known private paths; this is not hosted Actions validation or a secret scan.
+Executable tooling tests cover repository validation, fixtures and capture-runner failure/isolation. Rust integration tests additionally drive the real synthetic provider through the bounded process host, including deadlines and descendant cleanup. **They do not validate article extraction, daemon recovery, model behavior or Rune interaction.** Run tooling with `make check-fast` and Rust checks with `make check-rust`, after explicitly provisioning pinned prerequisites. The YAML/privacy gate is not hosted Actions validation or a secret scan.
 
 ## Fixture conventions
 

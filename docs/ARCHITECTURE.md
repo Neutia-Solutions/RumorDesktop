@@ -1,6 +1,6 @@
 # Process and data ownership
 
-Accepted design, 10 November 2026. Application code has not been implemented.
+Accepted design, 10 November 2026. The public provider contract/process host and synthetic provider exist; desktop, daemon, persistence and learning are not implemented yet.
 
 ```mermaid
 flowchart LR
@@ -22,6 +22,6 @@ Each adapter has its own private repository and runs as a separately installed t
 
 Canonical article identity is distinct from discovery channels and reversible story groups. Seen, explicit preference, queue membership and read state are separate. Fetched HTML is untrusted and sanitization is independent of extraction. ML features use only permitted information available when the headline was presented.
 
-Intended Cargo layout when implementation starts: `crates/core`, `crates/desktop`, `crates/daemon`, with common protocol/host modules initially in core. All source-adapter implementations are in private sibling repositories and are not members or dependencies of this workspace, including optional dependencies. Shared protocol/domain types must not pull Rune into core/daemon. Do not create empty crates simply to make the layout appear implemented.
+Current Cargo members are `crates/core` and `crates/provider-fixture`. Add `crates/desktop` and `crates/daemon` with real behavior when their dependencies/implementation are ready. All source-adapter implementations are in private sibling repositories and are not members or dependencies of this workspace, including optional dependencies. Shared protocol/domain types must not pull Rune into core/daemon. Do not create empty crates simply to make the layout appear implemented.
 
 The daemon/core can later serve a personal HTTP API. Website/mobile synchronization and service authentication are later scope. See [FEATURES.md](../FEATURES.md) for the public product scope.

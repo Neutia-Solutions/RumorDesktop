@@ -1,6 +1,6 @@
 # Process and data ownership
 
-Accepted design, 10 November 2026. The public provider contract/process host and synthetic provider exist; desktop, daemon, persistence and learning are not implemented yet.
+Accepted design, 10 November 2026. The public provider contract/process host and synthetic provider exist; SQLite article/feedback storage is implemented. The desktop, daemon process and learning remain unimplemented.
 
 ```mermaid
 flowchart LR

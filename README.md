@@ -8,7 +8,7 @@ The interface must be entirely keyboard-operable, with Vim-style defaults. A sep
 
 ## Development status
 
-Repository/GitHub tooling, a versioned provider contract and a bounded Linux subprocess host are implemented and tested with an executable synthetic provider. The Rune application and daemon remain unimplemented; no desktop build or real source integration is claimed.
+Repository/GitHub tooling, a versioned provider contract and a bounded Linux subprocess host are implemented and tested with an executable synthetic provider. Transactional SQLite storage preserves metadata, explicit feedback, undo history, independent reading state and pending download membership. The Rune application and daemon remain unimplemented; no desktop build or real source integration is claimed.
 
 Install the development requirement from `tools/requirements.txt` and provision the pinned Rust toolchain/dependencies explicitly, then run `make help` and `make check`. Rust validation uses the generated lockfile and offline mode. The full application gate still fails until the desktop and daemon suites exist.
 

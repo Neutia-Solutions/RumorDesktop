@@ -2,9 +2,11 @@
 
 ## Current state
 
-This repository contains agent/GitHub tooling plus a Rust workspace with a source-independent provider contract, Linux subprocess host and executable synthetic provider. Rust 1.95.0 is pinned and tested for this core slice, with a Cargo-generated lockfile. The Rune client and daemon remain unimplemented; do not present protocol tests as a desktop application build. See [provider protocol](docs/PROVIDER-PROTOCOL.md).
+This repository contains agent/GitHub tooling plus a Rust workspace with a source-independent provider contract, Linux subprocess host and executable synthetic provider. Rust 1.95.0 is pinned and tested for this core slice, with a Cargo-generated lockfile. Transactional SQLite storage now preserves article metadata, independent user state, undo history and pending downloads. The Rune client and daemon process remain unimplemented; do not present protocol tests as a desktop application build. See [provider protocol](docs/PROVIDER-PROTOCOL.md).
 
 Python 3.11+ (including `tomllib`), Git, Make and the pinned development requirement in `tools/requirements.txt` run the repository tools. PyYAML is used for real YAML parsing rather than a hand-written parser; install the requirement explicitly before validation. Python is development tooling; the application remains Rust. Run commands from this repository root; the Makefile also resolves paths from its own location when invoked with `make -f`.
+
+SQLite uses exactly pinned `rusqlite` with bundled SQLite, so a C compiler is required at build time. No system SQLite version or private database is used by tests.
 
 ## Accepted application stack
 

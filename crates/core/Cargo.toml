@@ -13,6 +13,10 @@ thiserror.workspace = true
 url.workspace = true
 chrono.workspace = true
 nix.workspace = true
+rusqlite.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
 
 [lints]
 workspace = true

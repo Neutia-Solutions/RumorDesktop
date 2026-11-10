@@ -1,0 +1,26 @@
+[
+  {
+    "path": "feed.xml",
+    "kind": "rss",
+    "provenance": "synthetic",
+    "scenario": "Stable GUID and tracking URL; future repeated-refresh and canonical identity tests."
+  },
+  {
+    "path": "reader.html",
+    "kind": "html",
+    "provenance": "synthetic",
+    "scenario": "Readable body with Unicode, code, links and an advisory table."
+  },
+  {
+    "path": "challenge.html",
+    "kind": "html",
+    "provenance": "synthetic",
+    "scenario": "Non-article page; future collector must pause for manual intervention."
+  },
+  {
+    "path": "feedback.json",
+    "kind": "json",
+    "provenance": "synthetic",
+    "scenario": "Explicit preference, queue and read state remain independent; no implicit negative."
+  }
+]

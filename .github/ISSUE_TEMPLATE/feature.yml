@@ -1,0 +1,32 @@
+name: Feature or development task
+description: Propose public application behavior or a bounded implementation task.
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: This is a public issue for source-independent app behavior. Keep provider identities, inventories, access findings, private adapter implementation and account data in private discussions.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and intended behavior
+      description: Describe the concrete workflow, user need and proposed result.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Include keyboard access, empty/error behavior and observable verification.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope, exclusions and alternatives
+      description: Identify affected public contracts, data changes and smaller alternatives.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Verification and recovery
+      description: Proposed tests, manual checks and data/compatibility rollback constraints.

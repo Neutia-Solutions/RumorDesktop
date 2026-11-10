@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Rumor synthetic local feed</title>
+    <link>https://news.invalid/</link>
+    <description>Authored test data, not publisher content.</description>
+    <item>
+      <guid isPermaLink="false">synthetic-harbour-001</guid>
+      <title>Harbour footpath reopens after repairs</title>
+      <link>https://news.invalid/harbour?utm_source=morning</link>
+      <pubDate>Tue, 10 Nov 2026 09:00:00 GMT</pubDate>
+      <description>A fictional local notice with a stable identity.</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">synthetic-advisory-002</guid>
+      <title>Example product receives a maintenance update</title>
+      <link>https://news.invalid/advisory</link>
+      <pubDate>Tue, 10 Nov 2026 10:00:00 GMT</pubDate>
+      <description>A fictional advisory, unrelated to a real vulnerability.</description>
+    </item>
+  </channel>
+</rss>

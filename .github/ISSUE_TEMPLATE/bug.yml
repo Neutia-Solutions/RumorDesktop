@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a reproducible problem in the public application.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue will be public. Do not include credentials, browser profiles, real reading history, private adapter code or publisher article bodies.
+        Report security vulnerabilities through the repository Security tab, following SECURITY.md.
+        Provider identities and source-specific implementation details belong in private discussions, not this public report.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Describe the trigger and resulting behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Prefer a synthetic fixture. Include keyboard steps and focus state when relevant.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment
+      description: Commit or release, OS, display server, and whether the daemon was running.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Relevant error messages or synthetic screenshots only. Remove local usernames and private data.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public disclosure check
+      options:
+        - label: I checked that this report contains no secrets, personal data or private adapter implementation.
+          required: true

@@ -1,0 +1,16 @@
+[
+  {
+    "article_id": "synthetic-harbour-001",
+    "seen": true,
+    "preference": "read_later",
+    "queued": false,
+    "reading_status": "read"
+  },
+  {
+    "article_id": "synthetic-advisory-002",
+    "seen": true,
+    "preference": null,
+    "queued": false,
+    "reading_status": "unread"
+  }
+]
